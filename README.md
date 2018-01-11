@@ -25,3 +25,5 @@ words.py - No longer used.
           
 Overall, I'm mostly happy with the progress with this project. I think it was a good refresher for the Python(though, 
   I feel like that there still are much to learn/relearn)
+
+TO DO: turn into Hangman?
