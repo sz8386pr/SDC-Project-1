@@ -8,6 +8,7 @@ Game retreives the words to guess from the dictionary file, selects one randomly
 <Files>
 characters.py - Characters class contains the guessedCharacters list, defaultCharacters list, and the number of blanks int value
   
+  
 dictionary.txt - Default dictionary file for the game
   
 gameLogic.py - Most of the game process goes through here. Displays the game board, checks the characters 
