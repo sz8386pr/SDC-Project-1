@@ -36,22 +36,24 @@ def pickAWord(wordList):
     randomWord = str(wordList[random.randint(0, len(wordList)-1)])
     return randomWord
 
-# Counts the number of characters within words and store the value as a list (ie.:"Rotten Apple" will return [6,5])
-def countWords(randomWord):
-    randomWord = randomWord.split(" ")
-    wordCount = []
+# No longer utilized
+    # # Counts the number of characters within words and store the value as a list (ie.:"Rotten Apple" will return [6,5])
+    # def countWords(randomWord):
+    #     randomWord = randomWord.split(" ")
+    #     wordCount = []
+    #
+    #     for x in range(len(randomWord)):
+    #         wordCount.append(len(randomWord[x]))
+    #
+    #     return wordCount
 
-    for x in range(len(randomWord)):
-        wordCount.append(len(randomWord[x]))
-
-    return wordCount
-
-
+# Generate the words to be guessed for the game
 def generateWords():
     wordList = readDictionary() # Create a dictionary list by reading from the txt file
-    word = pickAWord(wordList) # Randomly pick a word within the list (ie.: "Python Program")
-    wordCount = countWords(word) # Count the characters of the words picked (ie.: [6, 7])
-
-    guessWords = words.Words(word, wordCount) # Create a WordLists class object
+    guessWords = pickAWord(wordList) # Randomly pick a word within the list (ie.: "Python Program")
+    # No longer utilized
+        # wordCount = countWords(word) # Count the characters of the words picked (ie.: [6, 7])
+        #
+        # guessWords = words.Words(word, wordCount) # Create a WordLists class object
 
     return(guessWords)

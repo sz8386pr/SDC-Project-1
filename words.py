@@ -1,5 +1,7 @@
-# Created by Scott Kim
-# This file holds the Words class (str(words to guess), int[Character counts of each words])
+# No longer used
+    # Created by Scott Kim
+    # This file holds the Words class (str(words to guess), int[Character counts of each words])
+    # No longer used
 
 class Words:
 
