@@ -6,18 +6,18 @@ Game retreives the words to guess from the dictionary file, selects one randomly
   the words to win the game.
 
 <Files>
+characters.py - Characters class contains the guessedCharacters list, defaultCharacters list, and the number of blanks int value
+  
 dictionary.txt - Default dictionary file for the game
   
 gameLogic.py - Most of the game process goes through here. Displays the game board, checks the characters 
                 and displays previously guessed words
                 
-guessTheWords.py - The main program to run. Mostly for the UI. While it is fuctional as intended, I think I could 
-                    tidy up a bit more and move some of the codes/functions to gameLogic.py
+guessTheWords.py - The main program to run. Mostly for the UI. Moved program logic parts to gameLogic.py(While it is fuctional as intended, I think I could tidy up a bit more and move some of the codes/functions to gameLogic.py)
                     
 wordGenerator.py - Generates the words to be guessed for the game. More details in the file comments.
 
-words.py - Words class object file. holds the str(word) and int[character count], but charCount[] is no longer utilized 
-          due to the change of direction/logic as I was writing the program. Not sure if I should just get rid of it.
+words.py - No longer used. (Words class object file. holds the str(word) and int[character count], but charCount[] is no longer utilized due to the change of direction/logic as I was writing the program. Not sure if I should just get rid of it.)
           
           
 Overall, I'm mostly happy with the progress with this project. I think it was a good refresher for the Python(though, 
