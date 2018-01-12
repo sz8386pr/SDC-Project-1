@@ -14,7 +14,7 @@ def setup():
         input("Press enter to play!")
     except SyntaxError:
         pass
-    unnecessaryCounter() # May remove it
+    #unnecessaryCounter() # May remove it
 
     return guessWords, charInfo
 
