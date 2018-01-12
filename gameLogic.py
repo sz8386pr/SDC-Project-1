@@ -1,6 +1,6 @@
 # Created by Scott Kim
 # Most of the game logic/background process is done here
-
+import time
 import wordGenerator
 import characters
 
@@ -16,7 +16,16 @@ def createCharacterInformation():
 # Main display for the game
 def gameDisplay(guessWords, charInfo, turn):
 
-    board, blanks = drawBoard(guessWords, charInfo)
+    board, blanks, userInputMatch = drawBoard(guessWords, charInfo)
+
+    # Checks if the player's previous guess was a match or not
+    if turn != 1: # No need to check for the first turn
+        if userInputMatch:
+            print("\nYou guessed correctly!")
+            time.sleep(1)
+        else:
+            print("\nThat was not a correct guess")
+            time.sleep(1)
 
     # Check if there are any blanks left. If all the characters have been
     #   guessed correctly, player wins!
@@ -34,10 +43,13 @@ def gameDisplay(guessWords, charInfo, turn):
 
 # draws the game board with the guessed words and blanks "_"
 def drawBoard(guessWords, charInfo):
-    checkCharacters = charInfo.get_guessedCharacters() + charInfo.get_defaultCharacters()
+
+    checkCharacters =  charInfo.get_defaultCharacters() + charInfo.get_guessedCharacters()
     board = "" # Initial board to display
 
     blanks = 0
+    userInputMatch = False
+
     # Compares the guessedCharacters list to the words to guess.
     #   If they match, board should display that character.
     #   otherwise, display the character space holder "_" instead
@@ -48,12 +60,16 @@ def drawBoard(guessWords, charInfo):
             if cC in char:
                 board+=cC
                 matched = True
+                # user input is appended onto the last of the list
+                #   If there is a match
+                if checkCharacters[-1] in char:
+                    userInputMatch = True
 
         if matched == False:
             board+="_"
             blanks +=1
 
-    return board, blanks
+    return board, blanks, userInputMatch
 
 # Displays sorted list of guessed characters
 def displayGuessedCharacter(charInfo):
