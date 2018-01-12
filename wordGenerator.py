@@ -8,7 +8,7 @@
 import random
 import words
 
-# Reads from the dictionary file (dictionary.txt by default) and stores & returns the value into a list
+# Reads from the dictionary file (dictionary.txt by default) and stores & returns the value into a list. (Referenced try/except from ITEC1150 class lab 7 work )
 def readDictionary():
     fileName = "dictionary.txt"
     dictionaryFile = open(fileName, "r")
